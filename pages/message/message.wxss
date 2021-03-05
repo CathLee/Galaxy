@@ -1,0 +1,31 @@
+/* pages/message/message.wxss */
+.wrapper{
+  margin-top: 125rpx;
+  height: calc(100vh);
+  background-color: rgba(64, 97, 132, 0.3);
+}
+.message{
+  width: 90%;
+    height: 120rpx;
+    margin-top: 20rpx;
+    position: absolute;
+    left: 5%;
+}
+
+.mesInner{
+  margin-bottom: 20rpx;
+  background-color: #efefef;
+    border-radius: 30rpx;
+    height: 120rpx;
+}
+.infomation{
+  padding: 20rpx 20rpx 0;
+    color: #2d5278;
+    font-weight: bold;
+}
+.time{
+  color: #9a9c9e;
+    font-size: 25rpx;
+    padding: 10rpx 20rpx;
+    font-weight: 600;
+}

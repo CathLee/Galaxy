@@ -1,0 +1,27 @@
+<!--pages/posted/posted.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+
+<scroll-view id="sourceScroll" scroll-y="true" scroll-top="{{scrollTop}}" bindscrolltolower="loadMore"
+  bindscroll="scrollToUpper" style="height:{{windowHeight}}px;background-color: rgba(64, 97, 132, 0.3);">
+  <view class="container">
+    <view class="linear-bg">
+      <view class="source">
+        <view class="source-item" wx:for="{{sourceList}}" wx:for-item='source'>
+          <view class="source-title">{{source.title}}</view>
+          <view class="source-time">{{source.time}}</view>
+          <view class="source-delete" style="color:{{(index%2) != 0?'#fff':'#36628d'}}">删除</view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+
+
+
+
+<image src='./image/top.png' class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image>
+
+
+<newTabbar tabbar="{{tabbar}}" bind:tabChange="bindViewTap" selected="1" total = "{{sourceTotal}}"></newTabbar>

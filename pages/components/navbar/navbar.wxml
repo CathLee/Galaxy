@@ -1,0 +1,8 @@
+<view class='nav-wrap' style='height: {{height*2 + 20}}px;'>
+  <!-- // 导航栏 左边的标题 -->
+ 
+  <view class="nav-back" style='line-height: {{height*2 + 50}}px;' wx:if="{{navbarData.showCapsule}}" bindtap="navBack">
+    <image class="nav-capsule"  src="./image/pre.png"></image>
+  </view>
+  <view class='nav-title' style='line-height: {{height*2 + 44}}px;'>{{navbarData.title}}</view>
+</view>

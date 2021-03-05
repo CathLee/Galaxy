@@ -1,0 +1,13 @@
+<!--pages/components/partMenu/partMenu.wxml-->
+<view class="part-menu" style="top:{{top*2+19}}px">
+  <view class="part-title">
+    <!-- 函数部分未完成 -->
+    <view class="part-inner" bindtap="borderActive" data-selected="0">
+      <view class="{{Posted?'font-style':''}}"  >已发布</view>
+    </view>
+    <view class="part-inner" bindtap="borderActive" data-selected="1">
+      <view class="{{New?'font-style':''}}" >新添加</view>
+    </view>
+
+  </view>
+</view>

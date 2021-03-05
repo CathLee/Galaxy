@@ -1,0 +1,61 @@
+<!--pages/keshi/keshi.wxml-->
+<!--pages/homework/homework.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+
+<scroll-view id="sourceScroll" scroll-y="true" scroll-top="{{scrollTop}}" bindscrolltolower="loadMore"
+  bindscroll="scrollToUpper" style="height:{{windowHeight}}px;background-color: rgba(64, 97, 132, 0.3);">
+
+
+  <Menu bind:myevent="menuChange"></Menu>
+  <view class="container" style="margin-top:{{height}}px;height:{{windowHeight}}px">
+    <view wx:if="{{Posted}}">
+      <view class="left-hand">
+        <view class="titleInner">
+          <view class="title">课时记录</view>
+          <view class="deadline">截至2020年12月25日 15:35</view>
+        </view>
+
+        <view class="label" wx:for="{{doneClass}}" wx:for-item="done">
+          <view class="keshiTitle">{{done.title}}</view>
+          <view class="time">{{done.time}}</view>
+        </view>
+      </view>
+      <view class="right-hand">
+        <view class="titleInner">
+          <view class="title">剩余课时</view>
+          <view class="deadline">截至2020年12月25日 15:35</view>
+        </view>
+        <view class="label" wx:for="{{doneClass}}" wx:for-item="done">
+          <view class="keshiTitle">{{done.title}}</view>
+          <view class="time">{{done.time}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{{New}}">
+      <view class="costWrapper">
+        <view class="costTitleInner">
+          <view class="costTitle">课时费用</view>
+          <view class="deadline">截至2020年12月25日 15:35</view>
+        </view>
+        <view class="costDetail">
+          <view class="base">基础课：每课时100元/人</view>
+          <view class="strong">强化课：每课时150元/人</view>
+          <view class="yearTotal">本学年总课时为：20课时</view>
+          <view class="baseNum">基础课人数：0人</view>
+          <view class="strongNum">强化课人数：6人</view>
+
+        </view>
+
+        <view class="total">课时费用总数为：18000元</view>
+
+      </view>
+    </view>
+
+
+
+  </view>
+
+</scroll-view>
+<image src='./image/top.png' class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image>
+<custom_tabbar tabbar="{{tabbar}}" bind:tabChange="bindViewTap" selected="0"></custom_tabbar>

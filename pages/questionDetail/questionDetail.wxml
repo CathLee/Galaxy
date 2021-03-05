@@ -1,0 +1,28 @@
+<!--pages/questionDetail/questionDetail.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="wrapper">
+  <view class="selectedExercise">
+      <view class="exerciseTitle">题目</view>
+      <view class="exerciseInput"><input type="text" placeholder="01"></input><image src="./image/dropdown.png"></image></view>
+
+    </view>
+
+    <view class="middle">
+      <view class="left"><image class="leftIcon" src="./image/left.png"></image></view>
+      <view class="right"><image class="rightIcon" src="./image/right.png"></image></view>
+      <view class="stuImg">
+        <image src="./image/xiaomai.jpg"></image>
+      </view>
+      <view class="putScore">
+        <text>给分：0分（满分2分）</text>
+        
+      </view>
+    </view>
+
+    <view class="answerTitle">标准答案</view>
+    <view class="answer">
+
+    </view>
+</view>
+
+<custom_tabbar tabbar="{{tabbar}}" bind:tabChange="bindViewTap" selected="0"></custom_tabbar>

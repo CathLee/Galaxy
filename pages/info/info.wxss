@@ -1,0 +1,103 @@
+/* pages/info/info.wxss */
+.wrapper {
+  position: relative;
+  z-index: 0;
+  top: 8px;
+  height: calc(100vh);
+  background-color: rgba(64, 97, 132, 0.3);
+}
+
+.header {
+  padding: 0 85rpx;
+  margin-top: 95rpx;
+  height: 150rpx;
+  background-color: #6e93b9;
+}
+
+.title {
+  display: inline-block;
+  height: 150rpx;
+  line-height: 150rpx;
+  color: #fff;
+}
+
+.save {
+  width: 150rpx;
+  height: 150rpx;
+  /* display: inline-block; */
+  line-height: 150rpx;
+  float: right;
+}
+
+.saveIcon {
+  width: 60rpx;
+  height: 60rpx;
+  padding: 45rpx 0px;
+}
+
+.saveFont {
+  /* display: inline-block; */
+  width: 90rpx;
+  height: 60rpx;
+  float: right;
+  color: #fff;
+}
+
+.infoInner {
+  width: 95%;
+  height: 800rpx;
+  background-color: #efeff4;
+  border-radius: 20rpx;
+  margin: auto;
+  margin-top: 20rpx;
+}
+
+.avatar {
+  width: 100%;
+  height: 200rpx;
+  text-align: center;
+}
+
+.avatarSize {
+  width: 150rpx;
+  height: 150rpx;
+  background-color: mintcream;
+  margin: 25rpx;
+  border-radius: 50%;
+}
+
+
+
+.userInfo {
+  width: 90%;
+  height: 65rpx;
+  margin: 0 5%;
+  border-bottom: 5rpx solid #c3d1de;
+  padding-bottom: 20rpx;
+  margin-top: 20rpx;
+}
+
+.label {
+  /* display: inline-block; */
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  float: left;
+  font-size: 35rpx;
+  color: grey;
+}
+
+.content {
+  clear: both;
+  display: inline-block;
+  width: 475rpx;
+  height: 80rpx;
+  text-align: center;
+}
+
+.content input {
+  width: 475rpx;
+  height: 80rpx;
+  font-size: 35rpx;
+  font-weight: 600;
+}

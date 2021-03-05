@@ -1,0 +1,17 @@
+<!--pages/components/new_tabbar/newtabbar.wxml-->
+<view class="c_tabbar">
+  <view class="tabbar_item" wx:for="{{tabbar.list}}" wx:for-item="item" wx:for-index="index"
+    data-selectedIndex="{{index}}" wx:key="key" bind:tap="change">
+  
+    <view class="{{selected==index?'selected':''}} wrapper">
+      <text wx:if="{{item.text&&!item.iconType}}"
+      class="tabbar_item_title ">{{item.text}}</text>
+    </view>
+    <view class="circle">
+      <view>{{total}}</view>
+    </view>
+
+
+
+  </view>
+</view>

@@ -1,0 +1,28 @@
+<!--pages/myclass/myclass.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="wrapper">
+  <view class="inner">
+    <view class="boxInner">
+      <view class="new" bindtap="toNewClass">
+      <image src="./image/new.png" class="newPic"></image>
+      <view class="newClass">创建班级圈</view>
+    </view>
+    <view class="new" bindtap="toJoinClass">
+      <image class="newPic" src="./image/join.png"></image>
+      <view class="newClass">加入班级圈</view>
+    </view>
+    <view class="new" bindtap="toModifyClass">
+      <image class="newPic" src="./image/modify.png"></image>
+      <view class="newClass">修改班级圈</view>
+    </view>
+    <view class="new" bindtap="toSourceClass">
+      <image class="newPic" src="./image/source.png"></image>
+      <view class="newClass">班级资料管理</view>
+    </view>
+  </view>
+    </view>
+
+</view>
+
+
+<custom_tabbar tabbar="{{tabbar}}" bind:tabChange="bindViewTap" selected="0"></custom_tabbar>

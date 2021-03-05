@@ -1,0 +1,61 @@
+<!--pages/info/info.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="wrapper">
+  <view class="header">
+    <view class="title">编辑个人信息</view>
+    <view class="save">
+      <image class="saveIcon" src="./image/bingo.png"></image>
+      <view class="saveFont" bindtap="saveInfo">保存</view>
+    </view>
+  </view>
+
+  <view class="infoInner">
+    <view class="avatar">
+      <image class="avatarSize" src="./image/xiaomai.jpg"></image>
+    </view>
+    <view class="userInfo">
+      <view class="label">
+        姓名
+      </view>
+      <view class="content">
+        <input type="text" value="{{nameVal}}" bindblur="changenameValue" />
+      </view>
+    </view>
+
+    <view class="userInfo">
+      <view class="label">
+        性别
+      </view>
+      <view class="content">
+        <input type="text" value="{{sexVal}}" bindblur="changesexValue" />
+      </view>
+    </view>
+    <view class="userInfo">
+      <view class="label">
+        院校
+      </view>
+      <view class="content">
+        <input type="text" value="{{schoolVal}}" bindblur="changeschoolValue" />
+      </view>
+    </view>
+    <view class="userInfo">
+      <view class="label">
+        年级
+      </view>
+      <view class="content">
+        <input type="text" value="{{gradeVal}}" bindblur="changegradeValue" />
+      </view>
+    </view>
+    <view class="userInfo">
+      <view class="label">
+        电话
+      </view>
+      <view class="content">
+        <input type="text" value="{{telVal}}" bindblur="changetelValue" />
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<custom_tabbar tabbar="{{tabbar}}" bind:tabChange="bindViewTap" selected="1"></custom_tabbar>

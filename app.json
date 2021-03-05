@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/userinfo/userinfo",
+    "pages/index/index",
+    "pages/register/register",
+    "pages/question/question",
+    "pages/study/study",
+    "pages/homework/homework",
+    "pages/addQues/addQues",
+    "pages/posted/posted",
+    "pages/myclass/myclass",
+    "pages/toNew/toNew",
+    "pages/toJoin/toJoin",
+    "pages/toModify/toModify",
+    "pages/toSource/toSource",
+    "pages/fileDetail/fileDetail",
+    "pages/info/info",
+    "pages/keshi/keshi",
+    "pages/reback/reback",
+    "pages/message/message",
+    "pages/mytest/test",
+    "pages/workDetail/workDetail",
+    "pages/questionDetail/questionDetail",
+    "pages/topicDetail/topicDetail",
+    "pages/changeAnswer/changeAnswer",
+    "pages/classNameChange/nameChange",
+    "pages/completion/completion",
+    "pages/gotoCorrect/gotoCorrect"
+  ],
+  "usingComponents": {
+    "custom_tabbar": "/pages/components/custom_tabbar/custom_tabbar",
+    "newTabbar": "/pages/components/new_tabbar/newtabbar",
+    "nav-bar": "/pages/components/navbar/navbar",
+    "time": "/pages/components/time/time"
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "分区"
+      },
+      {
+        "pagePath": "pages/userinfo/userinfo",
+        "text": "我的"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "银河教育",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

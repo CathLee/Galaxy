@@ -1,0 +1,15 @@
+<!--pages/reback/reback.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+
+<view class="wrapper">
+  <view class="inner">
+    <scroll-view>
+      <textarea maxlength= "-1" name="" id="" class="text" placeholder="请写出使用时所产生的问题和疑惑"></textarea>
+    </scroll-view>
+  
+  <view class="submit">
+    提交反馈
+  </view>
+</view>
+</view>
+<custom_tabbar tabbar="{{tabbar}}" bind:tabChange="bindViewTap" selected="1"></custom_tabbar>

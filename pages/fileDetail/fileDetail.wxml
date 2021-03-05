@@ -1,0 +1,24 @@
+<!--pages/fileDetail/fileDetail.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+
+<view class="wrapper">
+  <view class="sourceInner">
+    <view class="addSource">
+      <image class="addPic" src="./image/addSmall.png"></image>
+      <view class="addTitle">添加资料</view>
+    </view>
+
+    <view class="list" wx:for="{{sourceList}}" wx:for-item = 'items'>
+      <view class="title">
+        {{items.title}}
+      </view>
+      <view class="time">{{items.time}}</view>
+      <view class="sourceDelete" data-myId= "{{items.id}}" bindtap="deleteSource">
+        删除
+      </view>
+    </view>
+  </view>
+</view>
+<view class="delete" bindtap="deleteFile">
+    删除文件夹
+</view>

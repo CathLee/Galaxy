@@ -1,0 +1,54 @@
+<!--pages/topicDetail/topicDetail.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+
+<view class="wrapper" style="height:{{windowHeight+200}}px">
+  <view class="inner">
+    <view class="top">
+      <view class="cover">
+        <view class="coverContent">封面</view>
+      </view>
+      <view class="coverDetail">
+        <view class="workTitle">
+          <input class="titleStyle" type="text" name="" id="" placeholder="高一下学期作业一" />
+        </view>
+        <view class="workClass">
+          <input class="classStyle" type="text" name="" id="" placeholder="数学" />
+          <image class="dropDown" src="./image/dropdown.png"></image>
+        </view>
+        <view class="workClass">
+          <input class="classStyle" type="text" name="" id="" placeholder="数学" />
+          <image class="dropDown" src="./image/dropdown.png"></image>
+        </view>
+        <view class="deadLine">
+          <view class="deadTitle">发布时间：2020年9月8日 20：12</view>
+        </view>
+        <view class="poster">发布者：高一语文老师周杰伦</view>
+      </view>
+    </view>
+
+    <view class="middle">
+
+      <view class="stuImg">
+        <image src="./image/xiaomai.jpg"></image>
+      </view>
+      <view class="putScore">
+        <view class="workClass">
+          <input class="classStyle" type="text" name="" id="" placeholder="解答题" />
+          <image class="dropDown" src="./image/dropdown.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="bottom">
+      <view class="stuImg">
+        <image src="./image/xiaomai.jpg"></image>
+      </view>
+      <view class="changeAnswer" bindtap="toChangeAnswer">
+        修改答案
+      </view>
+    </view>
+  </view>
+</view>
+<view class="delete">
+  删除
+</view>

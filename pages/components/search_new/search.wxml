@@ -1,0 +1,14 @@
+<!--pages/components/search/search.wxml-->
+<view class="search-wrapper">
+  <view class="search-inner">
+    <view class="icon">
+      <image class="icon-size" src="./image/search.png"></image>
+    </view>
+    <view class="input-size">
+      <input type="text" placeholder="以群号搜索" placeholder-class="holder-font" />
+    </view>
+  </view>
+</view>
+
+
+

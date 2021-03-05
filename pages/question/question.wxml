@@ -1,0 +1,172 @@
+<!--pages/question/question.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+
+<scroll-view id="sourceScroll" scroll-y="true" scroll-top="{{scrollTop}}" bindscrolltolower="loadMore"
+  bindscroll="scrollToUpper" style="height:{{windowHeight}}px;background-color: rgba(64, 97, 132, 0.3);">
+
+
+  <Menu bind:myevent="menuChange"></Menu>
+  <view class="container" style="margin-top:{{height}}px;height:{{windowHeight}}px">
+    <view class="left-hand">
+      <block wx:for="{{subList}}" wx:for-item="items">
+        <view class="{{flag==items.type?'subject-style':'normal'}}" bindtap="changeActive" data-type="{{items.type}}">
+          <view class="active" wx:if="{{flag==items.type}}">
+          </view>
+          <view class="{{flag==items.type?'sub-font':'sub-normal'}}">{{items.name}}</view>
+          <image class="guide" src="./image/next.png" wx:if="{{flag==items.type}}"></image>
+        </view>
+
+      </block>
+
+
+
+
+
+
+    </view>
+    <view class="right-hand">
+      <view wx:if="{{Posted}}">
+        <Search></Search>
+        <view class="type">
+          <view class="ques-type">
+            <view wx:for="{{quesType}}" wx:for-item="ques" class="{{ques.type==myType?'ques-style':'ques-normal'}}"
+              bindtap="changeType" data-type='{{ques.type}}'>
+              {{ques.name}}
+            </view>
+          </view>
+          <view class="hard-type">
+            <view wx:for="{{hardType}}" wx:for-item="hard" class="{{hard.type==myHardType?'ques-style':'ques-normal'}}"
+              bindtap="changeHardType" data-hard='{{hard.type}}'>
+              {{hard.name}}
+            </view>
+          </view>
+        </view>
+        <view class="source">
+          <view class="source-style" wx:for="{{sourceList}}" wx:for-item="sourceItem" bindtap="gotoTopicDetail">
+            <view class="source-title">{{sourceItem.title}}</view>
+            <view class="source-time">{{sourceItem.time}}</view>
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{New}}">
+        <view class="type">
+          <text class="new-font">1.题目类型</text>
+          <view class="ques-type">
+            <view wx:for="{{quesType}}" wx:for-item="ques" class="{{ques.type==myType?'ques-style':'ques-normal'}}"
+              bindtap="changeType" data-type='{{ques.type}}'>
+              {{ques.name}}
+            </view>
+          </view>
+          <text class="new-font">2.题目难度</text>
+          <view class="hard-type">
+            <view wx:for="{{hardType}}" wx:for-item="hard" class="{{hard.type==myHardType?'ques-style':'ques-normal'}}"
+              bindtap="changeHardType" data-hard='{{hard.type}}'>
+              {{hard.name}}
+            </view>
+          </view>
+          <view class="ques-detail" wx:if="{{myType=='choose'}}">
+            <text class="new-font">3.题目内容</text>
+            <view class="localPic">
+              <view class="getPic">
+                <!-- 这里拉取图像未做 -->
+                <image class="pic" src="./image/add.png" bindtap="uploadLocal"></image>
+              </view>
+              <view class="getFont">
+                <text class="get-font">添加试题内容</text>
+              </view>
+            </view>
+            <view class="new-font">4.题目答案</view>
+            <view class="answerInput">
+              <view class="input-style">
+                <input class="ans-input" type="text" placeholder="请自行输入正确选项" placeholder-class="holder-font" />
+              </view>
+            </view>
+            <view class="finnal">
+              <view class="{{isDone?'ques-style':'ques-normal'}}" bindtap="done" data-finnal="haveDone">
+                <view>添加完成</view>
+              </view>
+              <view class="{{isContinue?'ques-style':'ques-normal'}}" bindtap="done" data-finnal="continueTo">
+                继续添加
+              </view>
+            </view>
+
+
+          </view>
+          <view class="ques-detail" wx:if="{{myType=='text'}}">
+            <text class="new-font">3.题目内容</text>
+            <view class="localPic">
+              <view class="getPic">
+                <!-- 这里拉取图像未做 -->
+                <image class="pic" src="./image/add.png" bindtap=""></image>
+              </view>
+              <view class="getFont">
+                <text class="get-font">添加试题内容</text>
+              </view>
+            </view>
+            <view class="new-font">4.题目答案</view>
+            <view class="localPic">
+              <view class="getPic">
+                <!-- 这里拉取图像未做 -->
+                <image class="pic" src="./image/add.png" bindtap=""></image>
+              </view>
+              <view class="getFont">
+                <text class="get-font">添加试题内容</text>
+              </view>
+            </view>
+            <view class="finnal">
+              <view class="{{isDone?'ques-style':'ques-normal'}}" bindtap="done" data-finnal="haveDone">
+                <view>添加完成</view>
+              </view>
+              <view class="{{isContinue?'ques-style':'ques-normal'}}" bindtap="done" data-finnal="continueTo">
+                继续添加
+              </view>
+            </view>
+
+
+          </view>
+          <view class="ques-detail" wx:if="{{myType=='ask'}}">
+            <text class="new-font">3.题目内容</text>
+            <view class="localPic-ask">
+              <view class="getPic">
+                <!-- 这里拉取图像未做 -->
+                <image class="pic" src="./image/add.png" bindtap=""></image>
+              </view>
+              <view class="getFont">
+                <text class="get-font">添加试题内容</text>
+              </view>
+            </view>
+            <view class="new-font">4.题目答案</view>
+            <view class="localPic-ask">
+              <view class="getPic">
+                <!-- 这里拉取图像未做 -->
+                <image class="pic" src="./image/add.png" bindtap=""></image>
+              </view>
+              <view class="getFont">
+                <text class="get-font">添加试题内容</text>
+              </view>
+            </view>
+            <view class="finnal-ask">
+              <view class="ques-normal">
+                <input type="text" placeholder-class="finnal-font" placeholder="添加分值"/>
+              </view>
+              <view class="{{isDone?'ques-style':'ques-normal'}}" bindtap="done" data-finnal="haveDone">
+                <view>添加完成</view>
+              </view>
+              <view class="{{isContinue?'ques-style':'ques-normal'}}" bindtap="done" data-finnal="continueTo">
+                继续添加
+              </view>
+            </view>
+
+
+          </view>
+        </view>
+
+
+      </view>
+    </view>
+  </view>
+
+</scroll-view>
+
+<image src='./image/top.png' class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image>
+<custom_tabbar tabbar="{{tabbar}}" bind:tabChange="bindViewTap" selected="0"></custom_tabbar>

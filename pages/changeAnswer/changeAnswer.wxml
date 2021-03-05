@@ -1,0 +1,16 @@
+<!--pages/changeAnswer/changeAnswer.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="wrapper">
+  <view class="inner">
+    <view class="pic">
+      
+    </view>
+    <view class="getPic">
+      <image class="picIcon" src="./image/photoicon.png"></image>
+    </view>
+  </view>
+</view>
+
+<view class="submit">
+  提交
+</view>

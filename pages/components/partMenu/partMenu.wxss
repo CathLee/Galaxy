@@ -1,0 +1,28 @@
+/* pages/components/partMenu/partMenu.wxss */
+.part-menu{
+  position: absolute;
+  top: 125rpx;
+  width: 100%;
+  height: 60px;
+  background-color: #efeff4;
+  box-shadow: 0rpx 3rpx 7rpx 0rpx 
+		rgba(0, 0, 0, 0.34);
+}
+.part-title{
+    position: relative;
+    width: 350rpx;
+    height: 100%;
+    margin: auto;
+}
+.part-inner{
+  float: left;
+  margin-top: 50rpx;
+  padding-left: 30rpx;
+  font-size: 40rpx;
+  font-weight: bolder;
+}
+.font-style{
+  border: 6rpx solid #7ecef4;
+    border-width: 0 0 3px 0;
+    padding-bottom: 3px;
+}

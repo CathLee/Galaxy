@@ -1,0 +1,18 @@
+<!--pages/message/message.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+
+<view class="wrapper">
+  <view class="message">
+
+    <block wx:for="{{mesList}}" wx:for-item="mes" wx:for-index="index">
+      <view class="mesInner" bindtap="showDetail" data-title="{{mes.info}}"  
+      >
+        <view class="infomation">{{mes.info}}</view>
+        <view class="time">{{mes.time}}</view>
+      </view>
+    </block>
+
+  </view>
+
+</view>
+<custom_tabbar tabbar="{{tabbar}}" bind:tabChange="bindViewTap" selected="1"></custom_tabbar>

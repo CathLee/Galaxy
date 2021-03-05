@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "time":"/pages/components/time/time"
+  }
+}

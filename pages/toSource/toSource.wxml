@@ -1,0 +1,48 @@
+<!--pages/toSource/toSource.wxml-->
+
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+
+<scroll-view id="sourceScroll" scroll-y="true" scroll-top="{{scrollTop}}" bindscrolltolower="loadMore"
+  bindscroll="scrollToUpper" style="height:{{windowHeight}}px;background-color: rgba(64, 97, 132, 0.3);">
+
+
+  <view class="container" style="margin-top:{{height}}rpx;height:{{windowHeight}}px">
+    <view class="left-hand">
+      <block wx:for="{{subList}}" wx:for-item="items">
+        <view class="{{flag==index?'subject-style':'normal'}}" bindtap="changeActive" data-index="{{index}}">
+          <view class="active" wx:if="{{flag==index}}">
+          </view>
+          <view class="{{flag==index?'sub-font':'sub-normal'}}">{{items.name}}</view>
+          <image class="guide" src="./image/next.png" wx:if="{{flag==index}}"></image>
+        </view>
+
+      </block>
+    </view>
+    <view class="right-hand">
+      <Search></Search>
+      <view class="source">
+        <view class="sourceList" bindtap="tonewFile">
+          <image class="add" src="./image/addFile.png"></image>
+          <text class="title">新添加文件</text>
+        </view>
+        <block wx:for="{{sourceList}}">
+          <view class="sourceList" bindtap="tonewFile" data-id="{{item.id}}">
+            <image class="file" src="./image/file.png"></image>
+            <text class="fileTitle">{{item.title}}</text>
+          </view>
+        </block>
+
+
+
+
+      </view>
+
+
+
+    </view>
+  </view>
+
+</scroll-view>
+<image src='./image/top.png' class='goTop' hidden='{{!floorstatus}}' bindtap=" goTop">
+</image>
+<custom_tabbar tabbar="{{tabbar}}" bind:tabChange="bindViewTap" selected="0"></custom_tabbar>

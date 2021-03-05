@@ -1,0 +1,61 @@
+<!--userinfo.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+
+
+<view class="container" >
+<view hidden="{{logined}}">
+  <view class="whetherLog">您还未登录？点击下方按钮登录，尽享更多资源~</view>
+</view>
+  <view class="header">
+    <view class="header-pic">
+
+    </view>
+  </view>
+  <view class="log-reg">
+    <button class="log-style" open-type="getUserInfo" bindtap="login">登录</button>
+    <button class="reg-style" bindtap="register" bindtap="gotoReg">注册</button>
+  </view>
+
+  <view class="info">
+    <view class="classGroup">
+      <view class="infoTitle">基本功能</view>
+      <view class="icons">
+        <view class="iconDetail" bindtap="{{isLogin?'gotoClass':''}}">
+          <image class="img" src="./image/class.png"></image>
+          <view class="font">班级圈</view>
+        </view>
+        <view class="iconDetail" bindtap="{{isLogin?'gotoInfo':''}}">
+          <image class="infoPicimg" src="./image/info.png"></image>
+          <view class="font">信息完善</view>
+        </view>
+        <view class="iconDetail" bindtap="gotoKeShi">
+          <image class="keshiPicimg" src="./image/keshi.png"></image>
+          <view class="font">课时统计</view>
+        </view>
+        
+      </view>
+    </view>
+  </view>
+
+  <view class="info">
+    <view class="classGroup">
+      <view class="infoTitle">其他服务</view>
+      <view class="icons">
+        <view class="iconDetail" bindtap="gotoReback">
+          <image class="rebackPicimg" src="./image/reback.png"></image>
+          <view class="font">问题反馈</view>
+        </view>
+        <view class="iconDetail" bindtap="gotoMessage">
+          <image class="infoPicimg" src="./image/message.png"></image>
+          <view class="font">信息管理</view>
+        </view>
+        <view class="iconDetail">
+          <image class="keshiPicimg" src="./image/logout.png"></image>
+          <view class="font">退出登录</view>
+        </view>
+        
+      </view>
+    </view>
+  </view>
+</view>
+<custom_tabbar tabbar="{{tabbar}}" bind:tabChange="bindViewTap" selected="1"></custom_tabbar>

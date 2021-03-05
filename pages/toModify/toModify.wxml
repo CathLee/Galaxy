@@ -1,0 +1,48 @@
+<!--pages/toModify/toModify.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+
+
+<scroll-view id="sourceScroll" scroll-y="true" scroll-top="{{scrollTop}}" bindscrolltolower="loadMore"
+  bindscroll="scrollToUpper" style="height:{{windowHeight}}px; background-color: rgba(64, 97, 132, 0.3);">
+
+
+  <view class="wrapper">
+    <view class="inner">
+      <view class="title">已创建的班群:</view>
+      <view class="classInner" wx:for="{{myclassList}}">
+        <view class="myclass">
+          <view class="myTitle">{{item.title}}</view>
+          <view class="classId">班级编号:
+            <text class="idColor">{{item.id}}</text>
+          </view>
+        </view>
+        <view class="changeName" bindtap="nameChange">改名</view>
+        <view class="disband" bindtap='showDialog' data-classId = "{{item.id}}">解散</view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class='shade' hidden='{{popup}}' bindtap='hidePopup'></view>
+  <view class="shade_box popup" hidden="{{popup}}">
+  <view class="img">
+      <image class="status" src = "./image/warn.png"></image>
+  </view>
+  <view class="title">确定解散班级圈</view>
+  <view class="btn">
+    <view class="no" bindtap="hidePopup">取消</view>
+    <view class="yes" bindtap="disBand">解散</view>
+  </view>
+</view>
+
+</scroll-view>
+
+
+
+
+
+
+<image src='./image/top.png' class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image>
+
+
+<custom_tabbar tabbar="{{tabbar}}" bind:tabChange="bindViewTap" selected="1"></custom_tabbar>

@@ -1,0 +1,29 @@
+<!--pages/toJoin/toJoin.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+
+<view class="wrapper">
+  <view class="inner">
+    <Search />
+    <view class="allClass">
+
+      <view class="classInner" wx:for="{{classList}}" wx:for-item = "items">
+        <view class="className">{{items.title}}</view>
+        <view class="classTeacher">{{items.teacher}}老师管理</view>
+        <view class="application" bindtap="apply">申请加入</view>
+      </view>
+
+    </view>
+  </view>
+</view>
+
+
+<view class='shade' hidden='{{popup}}' bindtap='hidePopup'></view>
+<view class='shade_box popup' hidden='{{popup}}'>
+    <view class="img">
+      <image class="status" src = "./image/success.png"></image>
+    </view>
+    <view class="message">申请已提交</view>
+    <view class="finnal" >自动跳转回页面</view>
+</view>
+
+<custom_tabbar tabbar="{{tabbar}}" bind:tabChange="bindViewTap" selected="1"></custom_tabbar>

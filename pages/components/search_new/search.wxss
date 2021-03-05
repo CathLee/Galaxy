@@ -1,0 +1,40 @@
+/* pages/components/search/search.wxss */
+.search-wrapper {
+  display: flex;
+  width: 100%;
+  height: 80rpx;
+}
+
+.search-inner {
+  width: 470rpx;
+  height: 60rpx;
+  margin: auto;
+  background-color: rgba(239, 239, 244, 1);
+  border-radius: 30rpx;
+  box-shadow: 0rpx 3rpx 7rpx 0rpx rgba(0, 0, 0, 0.35);
+}
+
+.input-size{
+  margin-top: 8rpx;
+}
+
+.icon {
+  float: left;
+  margin-left: 30rpx;
+  margin-top: 15rpx;
+  margin-right: 20rpx;
+}
+
+.icon-size {
+  width: 35rpx;
+  height: 35rpx;
+}
+
+
+.holder-font {
+  margin-top: 5rpx;
+  font-size: 30rpx;
+}
+
+
+

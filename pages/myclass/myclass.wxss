@@ -1,0 +1,35 @@
+/* pages/myclass/myclass.wxss */
+.wrapper{
+  height: calc(100vh);
+  background-color: rgba(64, 97, 132, 0.3);
+}
+.inner{
+  position: absolute;
+    z-index: 1000;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    height: 400rpx;
+    background-color: rgba(239,239,239,.9);
+    border-radius: 15rpx;
+}
+.new{
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+  margin-top: 30rpx;
+}
+.newPic{
+  width: 80rpx;
+  height: 80rpx;
+}
+.boxInner{
+  width: 87%;
+  height: 100%;
+  margin: auto;
+}
+.newClass{
+  font-size:30rpx;
+  padding-top: 20rpx;
+  padding-bottom: 5rpx;
+}

@@ -1,0 +1,31 @@
+<!--pages/classNameChange/nameChange.wxml-->
+
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="wrapper">
+  <view class="inner">
+    <view class="title">新建群名：</view>
+    <view class="inputName">
+      <input type="text" bindblur="changeValue" value="{{nameVal}}"/>
+    </view>
+    <view class="submitName" bindtap="subName">
+      确定提交
+    </view>
+  </view>
+</view>
+
+<view class='shade' hidden='{{popup}}' bindtap='hidePopup'></view>
+<view class='shade_box popup' hidden='{{popup}}'>
+    <view class="img">
+      <image class="status" src = "{{imgSrc}}"></image>
+    </view>
+    <view class="title">{{titleStatu}}</view>
+    <view class="message">{{reBackMsg}}</view>
+    <view class="finnal" >自动跳转回页面</view>
+</view>
+
+
+ 
+
+
+<custom_tabbar tabbar="{{tabbar}}" bind:tabChange="bindViewTap" selected="1"></custom_tabbar>
+

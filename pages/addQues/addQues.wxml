@@ -1,0 +1,42 @@
+<!--pages/addQues/addQues.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+
+<scroll-view id="sourceScroll" scroll-y="true" scroll-top="{{scrollTop}}" bindscrolltolower="loadMore"
+  bindscroll="scrollToUpper" style="height:{{windowHeight}}px;background-color: rgba(64, 97, 132, 0.3);">
+
+
+  <Menu bind:myevent="menuChange"></Menu>
+  <view class="container">
+    <Search></Search>
+    <view class="type">
+      <view class="ques-type">
+        <view wx:for="{{quesType}}" wx:for-item="ques" class="{{ques.type==myType?'ques-style':'ques-normal'}}"
+          bindtap="changeType" data-type='{{ques.type}}'>
+          {{ques.name}}
+        </view>
+      </view>
+      <view class="hard-type">
+        <view wx:for="{{hardType}}" wx:for-item="hard" class="{{hard.type==myHardType?'ques-style':'ques-normal'}}"
+          bindtap="changeHardType" data-hard='{{hard.type}}'>
+          {{hard.name}}
+        </view>
+      </view>
+    </view>
+    <view class="linear-bg">
+      <view class="source">
+      <view class="source-item" wx:for="{{addSource}}" wx:for-item = 'source'>
+        <view class="source-title">{{source.title}}</view>
+        <view class="source-time">{{source.time}}</view>
+        <view class="source-add" style="color:{{(index%2) != 0?'#fff':'#36628d'}}" >添加</view>
+      </view> 
+        
+      </view>
+    </view>
+  </view>
+
+</scroll-view>
+
+<image src='./image/top.png' class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image>
+
+
+<newTabbar tabbar="{{tabbar}}" bind:tabChange="bindViewTap" selected="0"></newTabbar>

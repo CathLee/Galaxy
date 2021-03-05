@@ -1,0 +1,144 @@
+
+.whetherLog{
+    width: 90%;
+    text-align: center;
+    height: 65rpx;
+    line-height: 66rpx;
+    border-radius: 15rpx;
+    margin: auto;
+    background-color: #6e93b9;
+    color: #fff;
+}
+
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+
+.log-item {
+  margin: 10rpx;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 230rpx;
+  background-color: #fff;
+}
+
+.header-pic {
+  width: 150rpx;
+    height: 150rpx;
+    background-color: #efefef;
+    border-radius: 50%;
+    margin-top: 60rpx;
+}
+
+.container {
+  margin-top: 150rpx;
+  width: 100%;
+  /* height: 750px; */
+  height:calc(100vh - 100px);
+  background-color: #efefef;
+}
+
+.log-reg {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.log-style {
+  margin-right: 10rpx;
+  width: 180rpx !important;
+  background-color: #6e93b9;
+  border-radius: 10rpx;
+  height: 67rpx;
+  display: inline-block;
+  line-height: 60rpx;
+  color: #fff;
+
+  padding: 0;
+}
+
+.reg-style {
+  margin-right: 10rpx;
+  width: 180rpx !important;
+  background-color: #6e93b9;
+  border-radius: 10rpx;
+  height: 67rpx;
+  display: inline-block;
+  line-height: 60rpx;
+  color: #fff;
+  padding: 0;
+
+}
+
+.info {
+  width: 90%;
+  height: 300rpx;
+  background-color: #fff;
+  margin: auto;
+  border-radius: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.infoTitle {
+  width: 83%;
+  padding-top: 25rpx;
+  padding-bottom: 25rpx;
+  margin: auto;
+  font-weight: 400;
+  font-size: 35rpx;
+  font-weight: 400;
+  border-bottom: 2rpx solid #6e93b9;
+}
+
+.icons {
+  width: 83%;
+  margin: auto;
+  margin-top: 35rpx;
+}
+
+.iconDetail {
+  display: inline-block;
+  width: 22%;
+  height: 150rpx;
+  margin-right: 48rpx;
+  text-align: center;
+  margin-left: 15rpx;
+}
+
+.img {
+  width: 116rpx;
+  height: 76rpx;
+  margin-right: 20rpx;
+  margin-left: -5rpx;
+}
+
+.font {
+  width: 126rpx;
+  margin-left: 1px;
+  margin-top: 10px;
+  font-size: 30rpx;
+}
+
+.infoPicimg {
+  width: 99rpx;
+  height: 67rpx;
+}
+
+.keshiPicimg {
+  width: 67rpx;
+  height: 67rpx;
+}
+.rebackPicimg{
+  width: 76rpx;
+  height: 67rpx;
+}

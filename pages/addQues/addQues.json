@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "newTabbar":"/pages/components/new_tabbar/newtabbar",
+    "Search":"/pages/components/search/search"
+  }
+}

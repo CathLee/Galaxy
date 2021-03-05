@@ -1,0 +1,32 @@
+/* pages/reback/reback.wxss */
+.wrapper {
+  margin-top: 125rpx;
+  height: calc(100vh);
+  background-color: rgba(64, 97, 132, 0.3);
+}
+
+.inner{
+  width: 90%;
+ 
+  position: absolute;
+  left: 5%;
+  top: 12%;
+  height: 500rpx;
+  
+}
+.text{
+  height: 450rpx;
+  padding: 20rpx;
+  background-color: #efefef;
+  border-radius: 30rpx;
+}
+.submit{
+  width: 180rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    background-color: #6e93b9;
+    color: #fff;
+    border-radius: 30rpx;
+    margin-top: 30rpx;
+}

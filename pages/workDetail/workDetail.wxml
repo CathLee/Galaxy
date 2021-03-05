@@ -1,0 +1,118 @@
+<!--pages/workDetail/workDetail.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+
+<view class="wrapper" style="height:{{windowHeight+200}}px">
+  <view class="inner">
+    <view class="top">
+      <view class="cover" bindtap="gotoHomeworkDetail">
+        <view class="coverContent">作业首页<text>（点击可进入原试卷查看内容）</text></view>
+      </view>
+      <view class="coverDetail">
+        <view class="workTitle">
+          <input class="titleStyle" type="text" name="" id="" placeholder="高一下学期作业一" />
+        </view>
+        <view class="workClass" bindtap="subClass">
+          <input class="classStyle" type="text" name="" id="" placeholder="发布班级" />
+          <image class="dropDown" src="./image/dropdown.png"></image>
+        </view>
+        <view class="deadLine">
+          <view class="deadTitle">截至时间：</view>
+          <view class="deadTime">
+            <view class="box1"><input type="text" placeholder="2020" />
+              <text>年 06 月</text></view>
+            <view class="box2"><input type="text" placeholder="08" /><text>日</text></view>
+            <view class="box3"><input type="text" placeholder="08:14" /></view>
+          </view>
+        </view>
+        <view class="poster">发布者：高一语文老师周杰伦</view>
+      </view>
+    </view>
+
+    <view class="selectedExercise">
+      <view class="exerciseTitle">解答题</view>
+      <view class="exerciseInput"><input type="text" placeholder="01"></input>
+        <image src="./image/dropdown.png"></image>
+      </view>
+
+    </view>
+    <view class="middle">
+      <view class="left">
+        <image class="leftIcon" src="./image/left.png"></image>
+      </view>
+      <view class="right">
+        <image class="rightIcon" src="./image/right.png"></image>
+      </view>
+      <view class="stuImg">
+        <image src="./image/xiaomai.jpg"></image>
+      </view>
+      <view class="putScore">
+        <text>给分：</text>
+        <view class="input">
+          <input type="text" name="" id="" />
+        </view>
+      </view>
+    </view>
+    <view class="anayTitle">数据分析</view>
+    <view class="bottom">
+      <view class="completion">
+        <view class="complImg">
+          <image src="./image/completion.png"></image>
+        </view>
+        <view class="anayContent">完成度分析:86%</view>
+        <view class="complDetail" bindtap="gotoCompletion">
+          完成度详情
+        </view>
+      </view>
+
+      <view class="correction">
+        <view class="correctImg">
+          <image src="./image/correct.png"></image>
+        </view>
+        <view class="correctContent">
+          <view>选择题正确率：100%</view>
+          <view>选择题正确率：100%</view>
+          <view>选择题正确率：100%</view>
+        </view>
+        <view class="correctDetail" bindtap="gotoCorrect">
+          正确率详情
+        </view>
+      </view>
+
+      <view class="completion">
+        <view class="complImg">
+          <image src="./image/average.png"></image>
+        </view>
+        <view class="averContent">
+          <view>最高分为：118分</view>
+          <view>平均分为：85分</view>
+        </view>
+        <view class="averDetail">
+          分数详情
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+<view class='shade' hidden='{{popup}}' bindtap='hidePopup'></view>
+<view class='shade_box popup' hidden='{{popup}}'>
+  <view class="hideTitle">请切换所发布的班级：</view>
+  <scroll-view scroll-y="true" style="height:80%;">
+    <radio-group bindchange="radioChange">
+      <view style="width:100%" class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}">
+        <radio value="{{item.value}}" checked="true" />
+        <view class="weui-cell__bd">{{item.name}}</view>
+      </view>
+    </radio-group>
+  </scroll-view>
+  <view class="sub">
+      <view class="cancel" bindtap="cancelModal">取消</view>
+      <view class="sure">确定</view>
+    </view>
+</view>
+
+<view class="delete">
+  删除
+</view>

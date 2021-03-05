@@ -1,0 +1,76 @@
+<!--pages/gotoCorrect/gotoCorrect.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="wrapper">
+  <view class="inner">
+    <view class="choose">
+      <text class="title">选择题</text>
+      <view class="left">
+        <image class="leftIcon" src="./image/left.png"></image>
+      </view>
+      <view class="right">
+        <image class="rightIcon" src="./image/right.png"></image>
+      </view>
+      <view class="boxInner">
+        <view class="img"></view>
+        <view class="chooseDetail">
+          <view class="ansAndNum">
+            <text decode="{{true}}" >答案为：B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+            <text>作答人数：40人</text>
+          </view>
+          <view class="optionsCorrect">A选项：30%</view>
+          <view class="optionsCorrect">B选项：50%</view>
+          <view class="optionsCorrect">C选项：80%</view>
+          <view class="optionsCorrect">D选项：60%</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="choose">
+      <text class="title">填空题</text>
+      <view class="left">
+        <image class="leftIcon" src="./image/left.png"></image>
+      </view>
+      <view class="right">
+        <image class="rightIcon" src="./image/right.png"></image>
+      </view>
+      <view class="boxInner">
+        <view class="img"></view>
+        <view class="chooseDetail">
+          <view class="ansAndNum">
+            <text decode="{{true}}" >答案为：宋朝&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+            <text>作答人数：26人</text>
+          </view>
+          <view class="optionsCorrect">正确率为：30%</view>
+
+        </view>
+      </view>
+    </view>
+    <view class="choose">
+      <text class="title">解答题</text>
+      <view class="left">
+        <image class="leftIcon" src="./image/left.png"></image>
+      </view>
+      <view class="right">
+        <image class="rightIcon" src="./image/right.png"></image>
+      </view>
+      <view class="boxInner">
+        <view class="img"></view>
+        <view class="chooseDetail">
+          <view class="ansAndNum">
+            <text decode="{{true}}" >答案为：宋朝&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+            <text>作答人数：26人</text>
+          </view>
+          <view class="optionsCorrect">得分60%一下：30%</view>
+          <view class="optionsCorrect">得分60%到80%之间：50%</view>
+          <view class="optionsCorrect">得分80%以上：80%</view>
+          <view class="optionsCorrect">得分100%：60%</view>
+      </view>
+    </view>
+  </view>
+</view>
+</view>
+
+
+<view class="anay" bindtap="gotoComp">
+  完成度分析 >
+</view>

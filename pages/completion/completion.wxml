@@ -1,0 +1,39 @@
+<!--pages/completion/completion.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+
+<view class="wrapper" style="height:{{windowHeight+800}}px">
+  <view class="inner">
+    <view class="inner_left">
+      <text>已完成同学</text>
+      <view wx:if="{{doneList}}">
+        <view class="doneInner">
+
+          <view class="doneDetail" wx:for="{{doneList}}" wx:for-item="done">
+            <view class="doneCircle">{{done.comp}}%</view>
+            <view class="doneStu">{{done.name}}</view>
+          </view>
+        </view>
+
+
+      </view>
+    </view>
+    <view class="inner_right">
+      <text>未完成同学</text>
+      <view wx:if="{{notDoneList}}">
+        <view class="doneInner">
+
+          <view class="doneDetail" wx:for="{{notDoneList}}" wx:for-item="notDone">
+            <view class="notdoneCircle">{{notDone.comp}}%</view>
+            <view class="doneStu">{{notDone.name}}</view>
+          </view>
+        </view>
+
+
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="anay" bindtap="gotoCorrect">
+  正确率分析 >
+</view>

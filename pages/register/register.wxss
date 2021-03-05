@@ -1,0 +1,81 @@
+/* pages/register/register.wxss */
+.wrapper .bg{
+  position:absolute;
+  height: calc(100vh + 100px);
+  width: 100%;
+}
+
+.inner{
+  position: absolute;
+    z-index: 1000;
+    top: 32%;
+    left: 5%;
+    width: 90%;
+    height: 620rpx;
+    background-color: rgba(239,239,239,.9);
+    border-radius: 15rpx;
+}
+
+.title{
+  text-align: center;
+    display: inline-block;
+    width: 100%;
+    font-size: 38rpx;
+    font-weight: 400;
+    height: 140rpx;
+    line-height: 140rpx;
+}
+.phone{
+  width: 80%;
+    height: 80rpx;
+    margin: auto;
+    background-color: #fff;
+    border: 2rpx solid #cabfbf;
+}
+.phoneInput{
+  width: 100%;
+    height: 80rpx;
+    margin: auto;
+    font-size: 38rpx;
+    display: flex;
+}
+.verification{
+  width: 80%;
+  height: 180rpx;
+  margin: auto;
+  margin-top: 30rpx;
+}
+.code{
+  float: left;
+  padding: 10rpx 0px;
+  width: 55%;
+}
+.codeInput{
+  border: 2rpx solid #cabfbf;
+    height: 80rpx;
+    background-color: #fff;
+    font-size: 38rpx;
+}
+.getCode{
+  float: right;
+  display: flex;
+    height: 100rpx;
+    background-color: rgba(45, 82, 120, .7);
+    vertical-align: middle;
+    line-height: 100rpx;
+    font-size: 38rpx;
+    width: 38%;
+    justify-content: center;
+    color: #fff;
+}
+.subAndLogin{
+  text-align: center;
+    width: 50%;
+    font-size: 38rpx;
+    font-weight: 400;
+    line-height: 100rpx;
+    margin: auto;
+    background-color: rgba(45, 82, 120, .7);
+    border-radius: 15rpx;
+    color: #fff;
+}

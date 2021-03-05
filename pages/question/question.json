@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Menu":"/pages/components/partMenu/partMenu",
+    "Search":"/pages/components/search/search"
+  }
+}

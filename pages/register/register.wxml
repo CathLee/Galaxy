@@ -1,0 +1,22 @@
+<!--pages/register/register.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="wrapper">
+  <image class="bg" src="./image/bg.png"></image>
+  <view class="inner">
+    <text class="title">银河教育新用户</text>
+    <view class="phone">
+      <input type="text" placeholder="请输入电话号码" name="" id="" class="phoneInput" />
+    </view>
+    <view class="verification">
+      <view class="code">
+        <input type="text" class="codeInput" placeholder="请输入验证码" />
+      </view>
+      <view class="getCode">
+        获取验证码
+      </view>
+    </view>
+    <view class="subAndLogin">
+      直接注册并登录
+    </view>
+  </view>
+</view>
